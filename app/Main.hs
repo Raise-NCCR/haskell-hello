@@ -6,7 +6,7 @@ import qualified Network.Wai as Wai
 import qualified Network.HTTP.Types as HTypes
 
 main :: IO ()
-main = Warp.run 8000 helloApp
+main = Warp.run 8000 router
 
 router :: Wai.Application
 router req =
