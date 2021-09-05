@@ -24,6 +24,10 @@ dependencies:
 - wai
 - warp
 - http-types
+- mysql-simple
+- aeson
+- resource-pool
+- bytestring
 
 library:
   source-dirs: src

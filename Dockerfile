@@ -4,6 +4,7 @@ ARG BINARY_PATH
 WORKDIR /opt/hello
 RUN echo 'nameserver 8.8.8.8' >> /etc/resolv.conf && \
   apt-get update && apt-get install -y \
+  libmysqlclient21 \
   ca-certificates \
   libgmp-dev
 COPY "$BINARY_PATH" /opt/hello

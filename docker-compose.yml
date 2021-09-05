@@ -1,9 +1,16 @@
-version: '3'
+version: "3"
 services:
   hello:
     build:
       context: .
       args:
         - BINARY_PATH
-    image: fpco/myapp
+    ports:
+      - 8000:8000
+    image: ubuntu/mysql:8.0-21.04_beta
+    environment:
+      - MYSQL_ROOT_PASSWORD=Raise_1229
+      - MYSQL_DATABASE=todo
+      - MYSQL_USER=root
+      - MYSQL_HOST=localhost
     command: /opt/hello/hello-exe
